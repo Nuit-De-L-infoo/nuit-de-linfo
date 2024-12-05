@@ -1,0 +1,28 @@
+// web/app/styles/Herosection.module.scss
+
+$background-image: url('/images/homeBg.jpg'); // Updated to the correct image path
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: $background-image no-repeat center center fixed;
+    background-size: cover;
+    color: rgb(24, 13, 13);
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    .title {
+        font-size: 3rem;
+        margin: 0;
+    }
+
+    .description {
+        font-size: 1.5rem;
+    }
+}
