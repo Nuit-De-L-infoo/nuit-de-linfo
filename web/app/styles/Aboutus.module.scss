@@ -1,0 +1,151 @@
+$background-image: url('/images/heroBg.jpg'); // Update path for hero image
+$pirate-color: #2c7074;
+$--Button: #2c7074;
+$dark-bg: rgba(24, 13, 13, 0.8);
+$light-bg: rgba(255, 255, 255, 0.9);
+
+// Keyframe animations
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideInFromBottom {
+  0% { transform: translateY(50px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes buttonHover {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+@keyframes contentFadeIn {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.page {
+  font-family: 'Pirata One', sans-serif;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background: $background-image no-repeat center center fixed;
+  background-size: cover;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  position: relative;
+  z-index: -1;
+  padding: 20px;
+  animation: fadeIn 1.5s ease-out;  // Hero section fade-in
+
+  .title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin: 20px;
+    text-shadow: 2px 2px 10px rgba(75, 75, 75, 0.7);
+    opacity: 0;
+    animation: slideInFromBottom 1.2s ease-out forwards;  // Title slide-in
+
+  }
+
+  .description {
+    font-size: 1.6rem;
+    margin: 20px 0;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    max-width: 900px;
+    opacity: 0;
+    animation: fadeIn 2s ease-out 0.5s forwards;  // Description fade-in with delay
+  }
+
+  .btn {
+    background-color: $--Button;
+    color: white;
+    border-radius: 15px;
+    padding: 15px 30px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+
+    &:hover {
+      background-color: darken($--Button, 10%);
+      transform: scale(1.1);  // Button hover scale effect
+    }
+  }
+}
+
+.content {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 40px auto;
+  background-color: $light-bg;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  animation: contentFadeIn 1.5s ease-out forwards;  // Content fade-in
+
+  .subtitle {
+    font-size: 2.5rem;
+    color: $pirate-color;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;
+    color: #333;
+  }
+
+  .textAndImage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+
+    p {
+      flex: 1;
+      margin-right: 20px;
+      max-width: 60%;
+    }
+
+    .sectionImage {
+      max-width: 35%;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);  // Image scale effect
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $pirate-color;
+  padding: 20px;
+  text-align: center;
+  color: white;
+
+  .footerText {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}
