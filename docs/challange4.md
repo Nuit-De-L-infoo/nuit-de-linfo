@@ -10,7 +10,9 @@ Implement comprehensive monitoring for the Ocean-Body Educational Platform using
    - Resource utilization 
    - Error tracking
    - API health monitoring
-   - CO2 emissions tracking
+   - CO2 emissions tracking using Kepler and OpenTelemetry
+   - Power usage effectiveness (PUE) monitoring
+   - Energy consumption visualization
 
 #### Core Components
 1. **Grafana**
@@ -18,7 +20,10 @@ Implement comprehensive monitoring for the Ocean-Body Educational Platform using
    - Alert management
    - Node Exporter Full Dashboard implementation
    - Custom dashboard development
-   - CO2 emissions visualization
+   - CO2 emissions visualization with real-time tracking
+   - Power usage effectiveness (PUE) monitoring
+   - Energy consumption metrics
+   - Carbon intensity tracking
 
 3. **Environmental Impact**
    - Resource consumption metrics
@@ -29,19 +34,23 @@ Implement comprehensive monitoring for the Ocean-Body Educational Platform using
 
 ### Technical Implementation
 
-1. **Grafana Dashboards**
-   - Ocean-Body parallel usage metrics
-   - User engagement analytics from nginx logs
-   - System health overview
-   - Resource utilization trends
-   - Carbon footprint visualization
+1. **Monitoring Stack Integration**
+   - Grafana dashboards for environmental metrics
+   - Kepler integration for energy consumption tracking
+   - OpenTelemetry implementation for standardized metrics collection
+   - Prometheus for metrics aggregation
+   - Custom scripts for power sensor data collection
+   - Real-time ecological impact indicators
+   - Session resource usage metrics
 
 2. **Alert Configuration**
    - Flask application performance thresholds
    - Error rate monitoring through Flask error handlers
    - Resource usage alerts
-   - CO2 emission thresholds
+   - CO2 emission thresholds with Kepler
+   - Power consumption anomaly detection
    - Daily active users alerts via nginx logs
+   - Carbon intensity threshold alerts
 
 #### Monitoring Features
 - Real-time system metrics visualization

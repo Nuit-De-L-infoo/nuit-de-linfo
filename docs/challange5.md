@@ -83,3 +83,28 @@ Create an engaging pirate-themed guide system with an intelligent chatbot for th
 - Mobile-first design approach
 - QR code integration support
 - Event display compatibility
+
+## Implementation Details
+
+### 1. Game-Inspired UI Theme
+- **Design Language**: Maritime/pirate-themed UI components
+- **Key Elements**:
+  - Navigation styled as ship's wheel or compass
+  - Progress tracking via treasure map interface
+  - Ocean-themed color palette and typography
+  - Responsive design for all devices
+
+### 2. Customizable Pirate Chatbot
+- **Pirate Profiles**:
+  - Multiple personality templates (e.g., Captain, Navigator, Ship's Doctor)
+  - Customizable dialogue patterns and vocabulary
+  - Context-aware responses based on selected profile
+  - Multi-language support for each profile
+
+### 3. Interactive FAQ Section
+- **Features**:
+  - Categorized by ocean-body parallel topics
+  - Search functionality with pirate-themed interface
+  - Dynamic content loading
+  - User feedback integration
+  - Mobile-optimized layout
