@@ -6,12 +6,11 @@ WORKDIR /app
 
 COPY requirements.txt .
 
-# Install build dependencies needed for some Python packages
 RUN apk add --no-cache --virtual .build-deps \
     gcc \
     musl-dev \
-    python3-dev &&
-    /usr/local/bin/python -m pip install --no-cache-dir -r requirements.txt &&
+    python3-dev && \
+    python -m pip install --no-cache-dir -r requirements.txt && \
     apk del .build-deps
 
 COPY . .
