@@ -1,38 +1,39 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_cors import CORS
-from dotenv import load_dotenv
+from modules.chatbot.chatbot import MonkeyIslandChatbot
 import os
 
-# Load environment variables
-load_dotenv()
-
-# Initialize Flask app
 app = Flask(__name__)
-
-# Enable CORS
 CORS(app)
 
-# Configure app
-app.config['JSON_SORT_KEYS'] = False
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your-secret-key-here')
+# Initialize the chatbot
+chatbot = MonkeyIslandChatbot()
 
-# Routes
 @app.route('/')
-def index():
-    return {'message': 'API is running'}
+def home():
+    return jsonify({"message": "Ocean Explorer API is running"})
 
-# Error handlers
-@app.errorhandler(404)
-def not_found(error):
-    return {'error': 'Not found'}, 404
-
-@app.errorhandler(500)
-def server_error(error):
-    return {'error': 'Internal server error'}, 500
+@app.route('/chat', methods=['POST'])
+def chat():
+    try:
+        data = request.get_json()
+        if not data or 'message' not in data:
+            return jsonify({'error': 'Message is required'}), 400
+            
+        message = data['message']
+        # Get response from the chatbot
+        response = chatbot.get_response(message)
+        
+        # Ensure we have a valid response
+        if not response or 'response' not in response:
+            return jsonify({'error': 'Invalid response from chatbot'}), 500
+            
+        return jsonify(response)
+        
+    except Exception as e:
+        print(f"Error in chat endpoint: {str(e)}")  # For debugging
+        return jsonify({'error': str(e)}), 500
 
 if __name__ == '__main__':
-    app.run(
-        host=os.getenv('HOST', '0.0.0.0'),
-        port=int(os.getenv('PORT', 5000)),
-        debug=os.getenv('DEBUG', 'True').lower() == 'true'
-    )
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port, debug=True)

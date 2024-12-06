@@ -64,12 +64,16 @@ export default function Chat() {
         body: JSON.stringify({ message: inputText }),
       });
 
+      if (!response.ok) {
+        throw new Error('Failed to get response from chatbot');
+      }
+
       const data = await response.json();
 
       // Add pirate response
       const pirateMessage: Message = {
         id: (Date.now() + 1).toString(),
-        text: data.response,
+        text: data.response || 'Arrr, something went wrong!',
         sender: 'pirate',
         timestamp: new Date()
       };
@@ -77,6 +81,14 @@ export default function Chat() {
       setMessages(prev => [...prev, pirateMessage]);
     } catch (error) {
       console.error('Failed to get response:', error);
+      // Add error message
+      const errorMessage: Message = {
+        id: (Date.now() + 1).toString(),
+        text: 'Arrr, there was an error processing your message!',
+        sender: 'pirate',
+        timestamp: new Date()
+      };
+      setMessages(prev => [...prev, errorMessage]);
     } finally {
       setIsLoading(false);
     }
