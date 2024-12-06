@@ -9,7 +9,8 @@
     top: 20;                            /* Aligns the navbar to the top of the page */
     left: 0;                           /* Aligns the navbar to the left of the page */
     right: 0;                          /* Ensures the navbar spans the full width */
-    z-index: 1000;                     /* Keeps the navbar on top of other elements */
+    z-index: 1000;  
+    background-color: #ffffff;                   /* Keeps the navbar on top of other elements */
 
     .titre{
         color: #2c7074;
