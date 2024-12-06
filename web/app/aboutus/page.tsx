@@ -1,5 +1,6 @@
 import styles from '@/app/styles/Aboutus.module.scss'; 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';  // Import Footer component
 import Image from 'next/image'; // Import Image from next/image
 
 export default function About() {
@@ -26,8 +27,8 @@ export default function About() {
             src="/images/aboutus/Ce que nous offrons.jpg" 
             alt="Capitaine" 
             className={styles.sectionImage} 
-            width={500} // Set an appropriate width
-            height={300} // Set an appropriate height
+            width={500} 
+            height={300} 
           />
         </div>
         <p>
@@ -40,7 +41,7 @@ export default function About() {
             Nous sommes un équipage dirigé par le capitaine intrépide, réputé pour son esprit et ses talents en combat à &apos;épée, notamment dans &apos;art de &apos;insulte. Le premier maître, eh bien, il est toujours trop occupé à s&apos;assurer que notre réserve de rhum ne soit jamais à court. Ensemble, nous avons créé ce guide en hommage au plus grand trésor de tous : &apos;humour pirate et &apos;aventure !
           </p>
           <Image 
-            src="/images/aboutus/Rencontrez &apos;équipe.jpg" 
+            src="/images/aboutus/Rencontrez l'équipe.jpg" 
             alt="Capitaine" 
             className={styles.sectionImage} 
             width={500} 
@@ -67,12 +68,8 @@ export default function About() {
           Parce qu&apos;aucun autre guide de pirates ne combine aussi bien humour piquant, connaissances approfondies et expertise en chasse au trésor. Et en plus, nos accents de pirates sont inégalés sur les sept mers. C’est notre promesse — vous ne trouverez pas un équipage plus divertissant ailleurs !
         </p>
       </section>
-
-      <section className={styles.footer}>
-        <div className={styles.footerText}>
-          <p>Prêt à rejoindre notre équipage ? Posez vos questions, matelot !</p>
-        </div>
-      </section>
+<br /><br /><br /><br /><br />
+      <Footer />  {/* Add Footer here */}
     </div>
   );
 }
