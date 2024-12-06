@@ -2,6 +2,7 @@ import styles from '@/app/styles/Aboutus.module.scss';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';  // Import Footer component
 import Image from 'next/image'; // Import Image from next/image
+import ceQueNousOffronsImage from '@/public/images/aboutus/ce_que_nous_offrons.jpg';
 
 export default function About() {
   return (
@@ -12,10 +13,10 @@ export default function About() {
         <div className={styles.title}>Ahoy! Bienvenue sur le Guide des Pirates de &apos;Île aux Singes!</div>
         <div className={styles.description}>
           Nous sommes un équipage de pirates un peu déjantés, prêts à vous aider à naviguer les mers de &apos;aventure ! 
-          Nous sommes ici pour répondre à vos questions, divertir votre âme et vous mener à la gloire ou à la perdition ! Qui sait ?
-        </div>
-        <button className={styles.btn} id="haja">Rejoignez &apos;Aventure</button>
-      </section>
+          <br />
+          Nous sommes ici pour répondre à vos questions, <br /> divertir votre âme et vous mener à la gloire ou à la perdition ! Qui sait ?
+        </div>     
+        </section>
 
       <section className={styles.content}>
         <h2 className={styles.subtitle}>Les Origines du Guide</h2>
@@ -23,12 +24,12 @@ export default function About() {
           <p>
             Il était une fois, sur les rives traîtresses de l&apos;Île aux Singes, un équipage hétéroclite de pirates, aventuriers et chasseurs de trésors. La légende du trésor de &apos;île nous unissait. Mais ce n&apos;était pas seulement de &apos;or que nous cherchions — c&apos;étaient les secrets, les mystères, et surtout, le plaisir !
           </p>
-          <Image 
-            src="/images/aboutus/Ce que nous offrons.jpg" 
-            alt="Capitaine" 
-            className={styles.sectionImage} 
-            width={500} 
-            height={300} 
+          <Image
+            src={ceQueNousOffronsImage}
+            alt="Capitaine"
+            className={styles.sectionImage}
+            width={500}
+            height={300}
           />
         </div>
         <p>
@@ -40,13 +41,14 @@ export default function About() {
           <p>
             Nous sommes un équipage dirigé par le capitaine intrépide, réputé pour son esprit et ses talents en combat à &apos;épée, notamment dans &apos;art de &apos;insulte. Le premier maître, eh bien, il est toujours trop occupé à s&apos;assurer que notre réserve de rhum ne soit jamais à court. Ensemble, nous avons créé ce guide en hommage au plus grand trésor de tous : &apos;humour pirate et &apos;aventure !
           </p>
-          <Image 
-            src="/images/aboutus/Rencontrez l'équipe.jpg" 
-            alt="Capitaine" 
-            className={styles.sectionImage} 
-            width={500} 
-            height={300} 
+    <Image
+            src={ceQueNousOffronsImage}
+            alt="Capitaine"
+            className={styles.sectionImage}
+            width={500}
+            height={300}
           />
+      
         </div>
 
         <h2 className={styles.subtitle}>Ce Que Nous Offrons</h2>
@@ -54,12 +56,12 @@ export default function About() {
           <p>
             Vous avez besoin d&apos;aide pour naviguer sur les mers des pirates ? Nous avons tout ce qu&apos;il vous faut, des astuces et des conseils pratiques. Que vous cherchiez une carte au trésor ou la meilleure insulte de pirate, nous vous fournirons les connaissances nécessaires, le tout avec un rire et un cache-œil !
           </p>
-          <Image 
-            src="/images/aboutus/Ce que nous offrons.jpg" 
-            alt="Capitaine" 
-            className={styles.sectionImage} 
-            width={500} 
-            height={300} 
+          <Image
+            src={ceQueNousOffronsImage}
+            alt="Capitaine"
+            className={styles.sectionImage}
+            width={500}
+            height={300}
           />
         </div>
 
