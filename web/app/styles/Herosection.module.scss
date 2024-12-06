@@ -1,7 +1,20 @@
 // web/app/styles/Herosection.module.scss
 
-$background-image: url('/images/homeBg.jpg'); // Updated to the correct image path
+$background-image: url('/images/heroBg.jpg'); // Updated to the correct image path
 
+
+
+.btn{
+    border-radius: 15px;
+    background-color: white;
+    padding: 2px;
+    width: 100px;
+    border: 2px solid #2c7074;
+    margin: 2px;
+}
+#haja{
+    background-color: #2c7074;
+}
 .hero-section {
     display: flex;
     justify-content: center;

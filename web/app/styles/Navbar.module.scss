@@ -1,0 +1,59 @@
+/* Navbar Container */
+.navbar {
+    padding: 15px 30px;               /* Adds padding inside the navbar */
+    display: flex;                     /* Flexbox layout for easy item alignment */
+    justify-content: space-evenly;    /* Space between the navbar items */
+    align-items: center;               /* Vertically centers the navbar items */
+    width: 100%;                       /* Makes the navbar span the full width of the screen */
+    position: fixed;                   /* Keeps the navbar fixed at the top */
+    top: 20;                            /* Aligns the navbar to the top of the page */
+    left: 0;                           /* Aligns the navbar to the left of the page */
+    right: 0;                          /* Ensures the navbar spans the full width */
+    z-index: 1000;                     /* Keeps the navbar on top of other elements */
+
+    .titre{
+        color: #2c7074;
+        font-weight: bold;
+        font-size: 24px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: bold;
+    }
+    .title:hover{
+        color: #2c7074;
+        cursor: pointer;
+    }
+}
+
+/* Navbar List */
+.navbar__item {
+    display: flex;                     /* Flexbox layout for the navbar items */
+    list-style-type: none;             /* Removes default list styles */
+    gap: 60px;                         /* Adds space between each list item */
+}
+
+/* Navbar Links */
+.navbar__item li {
+    margin: 0;                         /* Removes margin around the list items */
+}
+
+/* Navbar Link Styling */
+.navbar__item a {
+    text-decoration: none;             /* Removes the underline from the links */
+    color: #2c7074;                    /* Sets the default text color */
+    font-size: 16px;                   /* Sets the font size */
+    font-weight: 500;                  /* Makes the font weight medium */
+    transition: color 0.3s ease-in-out; /* Adds a smooth color transition on hover */
+}
+
+/* Navbar Link Hover Effect */
+.navbar__item a:hover {
+    color: #0e425a;                    /* Changes the color to a gold shade on hover */
+}
+
+/* Logo Styling */
+.navbar img {
+    height: 40px;                      /* Sets a fixed height for the logo */
+    object-fit: contain;               /* Ensures the logo image scales well without distortion */
+}
