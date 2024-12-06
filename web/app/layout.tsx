@@ -1,7 +1,7 @@
 // app/layout.tsx
 import { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.scss";
 
 // Local font imports
 const geistSans = localFont({
