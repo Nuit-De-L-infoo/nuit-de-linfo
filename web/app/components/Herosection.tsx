@@ -15,8 +15,8 @@ const HeroSection: React.FC = () => {
                         Discover
                     </button>
                     <button id={style['haja']} className={style['btn']}>
-                        Ay haja
-                    </button>
+                        Contact     
+                </button>
                 </div>
             </div>
         </div>
