@@ -1,7 +1,6 @@
 import React from 'react';
 import styles from '@/app/styles/faq.module.scss';
 import Navbar from '@/app/components/Navbar';
-import Footer from '@/app/components/Footer';
 
 const FAQPage: React.FC = () => {
     const faqs = [
@@ -15,7 +14,6 @@ const FAQPage: React.FC = () => {
             question: "Comment suivre ma commande ?",
             answer: "Vous recevrez un numéro de suivi par e-mail une fois votre commande expédiée."
         },
-        // ... add more FAQs as needed
     ];
 
     return (
