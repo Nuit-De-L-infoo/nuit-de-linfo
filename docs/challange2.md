@@ -1,7 +1,8 @@
 # AI Integration Challenge: Ocean-Body Intelligence
 
 ## Overview
-Enhance the Ocean-Body Educational Platform with AI-powered features that create an intelligent, personalized learning experience about ocean-body parallels.
+The objective is to enhance the Ocean-Body Educational Platform using cutting-edge Artificial Intelligence (AI) techniques to deliver an intelligent, interactive, and personalized learning experience. The platform explores parallels between ocean systems and the human body, providing users with insights into marine ecosystems and their resemblance to human biological processes.
+
 
 ### Core AI Features
 
@@ -15,6 +16,7 @@ Enhance the Ocean-Body Educational Platform with AI-powered features that create
    - Custom learning paths for different user types
    - Progress tracking and recommendations
    - Multi-language support for global accessibility
+
 
 3. **Interactive Features**
    - Natural language chatbot for ocean-body questions
