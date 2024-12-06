@@ -15,16 +15,18 @@ os.environ['TRANSFORMERS_CACHE'] = 'E:/transformers_cache'  # Remplacez par un c
 class MonkeyIslandChatbot:
     _instance = None
 
-    def __new__(cls):
+    def __new__(cls, *args, **kwargs):
         if cls._instance is None:
             cls._instance = super(MonkeyIslandChatbot, cls).__new__(cls)
             cls._instance._initialized = False
         return cls._instance
 
-    def __init__(self):
+    def __init__(self, data_path=None):
         if self._initialized:
             return
-
+            
+        self.data_path = data_path
+        
         # Initialisation du modèle avec Hugging Face
         self.tokenizer = AutoTokenizer.from_pretrained("facebook/opt-125m")
         
@@ -50,6 +52,7 @@ class MonkeyIslandChatbot:
         self._initialize_embeddings()
 
         self._initialized = True
+
     def _initialize_embeddings(self):
         """Pré-calculer les embeddings pour tous les documents."""
         print("Initialisation des embeddings...")
@@ -86,7 +89,7 @@ class MonkeyIslandChatbot:
     def _load_monkey_island_data(self):
         """Load Monkey Island data."""
         try:
-            json_path = Path("./monkey_island_data.json")
+            json_path = self.data_path if self.data_path else Path("./monkey_island_data.json")
             with open(json_path) as f:
                 self.monkey_island_data = json.load(f)
         except Exception as e:
