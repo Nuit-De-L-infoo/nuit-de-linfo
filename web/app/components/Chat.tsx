@@ -103,7 +103,7 @@ export default function Chat() {
           className="bg-gradient-to-r from-blue-500 to-teal-500 text-white p-6 rounded-full shadow-lg hover:scale-105 transition-transform"
         >
           <Image
-            src="/images/pirates/pngwing.com.png"
+            src="/images/pirates/pirateAvatar.jpeg"
             alt=""
             width={50}
             height={50}
@@ -119,7 +119,7 @@ export default function Chat() {
           <div className="bg-gradient-to-r from-blue-600 to-teal-600 text-white p-4 rounded-t-lg flex items-center justify-between">
             <div className="flex items-center justify-center w-full">
             <Image
-                src="/images/pirates/pngwing.com.png"
+                src="/images/pirates/pirateAvatar.jpeg"
                 alt="Pirate Avatar"
                 width={35}
                 height={35}

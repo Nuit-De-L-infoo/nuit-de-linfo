@@ -36,10 +36,10 @@ const ContactPage: React.FC = () => {
             <Navbar />
             <div className="flex-grow flex items-center justify-center mt-12">
                 <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-lg ">
-                    <h1 className="text-3xl font-semibold text-center mb-6" style={{ color: '#2c7074' }}>Contact Us</h1>
+                    <h1 className="text-3xl font-semibold text-center mb-6" style={{ color: '#2c7074' }}>Contactez-nous</h1>
                     <form onSubmit={handleSubmit}>
                         <div className="mb-4">
-                            <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Name:</label>
+                            <label htmlFor="name" className="block text-gray-700 font-medium mb-2">Nom :</label>
                             <input
                                 type="text"
                                 id="name"
@@ -51,7 +51,7 @@ const ContactPage: React.FC = () => {
                             />
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email:</label>
+                            <label htmlFor="email" className="block text-gray-700 font-medium mb-2">Email :</label>
                             <input
                                 type="email"
                                 id="email"
@@ -63,7 +63,7 @@ const ContactPage: React.FC = () => {
                             />
                         </div>
                         <div className="mb-6">
-                            <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message:</label>
+                            <label htmlFor="message" className="block text-gray-700 font-medium mb-2">Message :</label>
                             <textarea
                                 id="message"
                                 name="message"
@@ -78,7 +78,7 @@ const ContactPage: React.FC = () => {
                             className="w-full py-3 text-white font-semibold rounded-lg hover:bg-blue-700 transition"
                             style={{ backgroundColor: '#2c7074' }}
                         >
-                            Submit
+                            envoyer
                         </button>
                     </form>
                 </div>

@@ -1,19 +1,22 @@
 import React from 'react';
-import styles from '@/app/styles/Navbar.module.scss'; // Importing the SCSS module
+import styles from '@/app/styles/Navbar.module.scss'; // Importation du module SCSS
 
 const Navbar: React.FC = () => {
     return (
         <div className={styles.navbar}>
-            {/* Logo on the left */}
+            {/* Logo à gauche */}
             <a href="/" className={styles.title}>Aqua <span className={styles.titre}>Corps</span></a>
 
-            {/* Navigation links aligned to the right */}
+            {/* Liens de navigation alignés à droite */}
             <ul className={styles.navbar__item}>
                 <li>
-                    <a href="/">Home</a>
+                    <a href="/">Accueil</a>
                 </li>
                 <li>
-                    <a href="/aboutus">About</a>
+                    <a href="/adventure">Adventure</a>
+                </li>
+                <li>
+                    <a href="/aboutus">À propos</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
