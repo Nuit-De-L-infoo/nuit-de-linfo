@@ -1,10 +1,9 @@
 // app/layout.tsx
 import { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import Chat from "@/app/components/Chat";
+import "./globals.scss";
+import Chat from "./components/Chat";
 
-// Local font imports
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",

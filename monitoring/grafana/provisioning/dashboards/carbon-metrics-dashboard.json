@@ -1,0 +1,48 @@
+{
+    "dashboard": {
+      "id": null,
+      "uid": "carbon-metrics-dashboard",
+      "title": "Carbon Impact Dashboard",
+      "tags": ["carbon", "sustainability", "metrics"],
+      "timezone": "browser",
+      "panels": [
+        {
+          "type": "graph",
+          "title": "CO2 Emissions per Service",
+          "targets": [
+            {
+              "expr": "sum(rate(process_cpu_seconds_total[5m])) by (service) * 0.2",
+              "legendFormat": "{{service}}",
+              "interval": "1m"
+            }
+          ],
+          "yaxes": [
+            {
+              "format": "g",
+              "label": "CO2 (grams)",
+              "min": 0
+            }
+          ]
+        },
+        {
+          "type": "gauge",
+          "title": "Current Carbon Intensity",
+          "targets": [
+            {
+              "expr": "sum(rate(node_cpu_seconds_total{mode='user'}[5m])) * 0.5",
+              "legendFormat": "Carbon Intensity"
+            }
+          ],
+          "options": {
+            "maxValue": 100,
+            "minValue": 0,
+            "thresholds": [
+              { "color": "green", "value": null },
+              { "color": "yellow", "value": 50 },
+              { "color": "red", "value": 80 }
+            ]
+          }
+        }
+      ]
+    }
+  }
