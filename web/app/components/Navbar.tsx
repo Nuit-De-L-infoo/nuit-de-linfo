@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/about">About</a>
+                    <a href="/aboutus">About</a>
                 </li>
                 <li>
                     <a href="/contact">Contact</a>
