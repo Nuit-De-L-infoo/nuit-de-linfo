@@ -2,7 +2,6 @@ import styles from '@/app/styles/Aboutus.module.scss';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';  // Import Footer component
 import Image from 'next/image'; // Import Image from next/image
-import ceQueNousOffronsImage from '@/public/images/aboutus/ce_que_nous_offrons.jpg';
 
 export default function About() {
   return (
@@ -25,7 +24,7 @@ export default function About() {
             Il était une fois, sur les rives traîtresses de l&apos;Île aux Singes, un équipage hétéroclite de pirates, aventuriers et chasseurs de trésors. La légende du trésor de &apos;île nous unissait. Mais ce n&apos;était pas seulement de &apos;or que nous cherchions — c&apos;étaient les secrets, les mystères, et surtout, le plaisir !
           </p>
           <Image
-            src={ceQueNousOffronsImage}
+            src="/images/aboutus/image1.jpg"
             alt="Capitaine"
             className={styles.sectionImage}
             width={500}
@@ -42,7 +41,7 @@ export default function About() {
             Nous sommes un équipage dirigé par le capitaine intrépide, réputé pour son esprit et ses talents en combat à &apos;épée, notamment dans &apos;art de &apos;insulte. Le premier maître, eh bien, il est toujours trop occupé à s&apos;assurer que notre réserve de rhum ne soit jamais à court. Ensemble, nous avons créé ce guide en hommage au plus grand trésor de tous : &apos;humour pirate et &apos;aventure !
           </p>
     <Image
-            src={ceQueNousOffronsImage}
+            src="/images/aboutus/image2.jpg"
             alt="Capitaine"
             className={styles.sectionImage}
             width={500}
@@ -57,7 +56,7 @@ export default function About() {
             Vous avez besoin d&apos;aide pour naviguer sur les mers des pirates ? Nous avons tout ce qu&apos;il vous faut, des astuces et des conseils pratiques. Que vous cherchiez une carte au trésor ou la meilleure insulte de pirate, nous vous fournirons les connaissances nécessaires, le tout avec un rire et un cache-œil !
           </p>
           <Image
-            src={ceQueNousOffronsImage}
+            src="/images/aboutus/image1.jpg"
             alt="Capitaine"
             className={styles.sectionImage}
             width={500}
