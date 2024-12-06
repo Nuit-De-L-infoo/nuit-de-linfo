@@ -1,0 +1,80 @@
+.faqPage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('/images/heroBg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.faqContainer {
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+    width: 80rem;
+  }
+  
+  .faqTitle {
+    font-size: 5rem;
+    color: #2c7074;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .faqItem {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+  }
+  
+  .faqItem:last-child {
+    border-bottom: none;
+  }
+  
+  .faqQuestion {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #2c7074;
+    margin: 0;
+    text-decoration: none;
+  }
+  
+  .faqAnswer {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
+  
+  .faqQuestion:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 600px) {
+    .faqContainer {
+      padding: 20px;
+    }
+  
+    .faqTitle {
+      font-size: 1.5rem;
+    }
+  
+    .faqQuestion {
+      font-size: 1.1rem;
+    }
+  
+    .faqAnswer {
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,7 +1,17 @@
 # Module Chatbot Monkey Island 🏴‍☠️
 
 ## Description
-Ce module implémente un chatbot interactif basé sur l'univers de Monkey Island, capable d'interagir avec les utilisateurs en adoptant différentes personnalités de personnages du jeu.
+Ce module implémente un chatbot interactif basé sur l'univers de Monkey Island, développé dans le cadre du défi "L'île aux singes 2.0" de la Nuit de l'Info. Il offre une expérience d'assistance utilisateur immersive en adoptant les personnalités emblématiques de la série.
+
+## Contexte du Défi
+- **Événement**: Nuit de l'Info
+- **Sponsor**: 3DS OUTSCALE
+- **Objectif**: Créer une fonctionnalité d'aide utilisateur originale et immersive
+- **Critères d'évaluation**:
+  - Originalité de l'approche
+  - Intégration de l'univers Monkey Island
+  - Qualité de l'humour et références
+  - Design et expérience utilisateur
 
 ## Fonctionnalités principales
 
@@ -39,3 +49,23 @@ Ce module implémente un chatbot interactif basé sur l'univers de Monkey Island
 - Chargement automatique des templates et données
 - Recherche contextuelle dans la base de connaissances
 - Génération de réponses personnalisées par personnage
+
+## Spécificités du projet
+
+### Intégration culturelle
+- Références aux jeux Monkey Island
+- Easter eggs cachés
+- Citations célèbres de la série
+- Énigmes et devinettes thématiques
+
+### Aspects techniques innovants
+- Interface conversationnelle adaptative
+- Système de reconnaissance du contexte
+- Gestion des émotions des personnages
+- Mécanismes de progression dans le dialogue
+
+## Déploiement et utilisation
+- Instructions d'installation
+- Guide de configuration
+- Exemples d'utilisation
+- Documentation API

@@ -50,3 +50,26 @@ The goal is to demonstrate the critical importance of ocean preservation by comp
 
 ## Project Objective
 To create an engaging tool that illustrates how the health of the ocean mirrors the human body, fostering awareness and action toward ocean conservation.
+
+# Main Challenge Technical Details
+
+## Backend Architecture (Flask)
+
+### Core Components
+- Flask application server
+- RESTful API endpoints
+- SQLAlchemy for database operations
+- Flask-CORS for frontend integration
+
+### Key Features
+1. Educational Content API
+   - Endpoints for ocean-body system comparisons
+   - Interactive content delivery
+   - Media asset management
+
+2. User Interaction
+   - Session management
+   - Progress tracking
+   - Interactive elements state management
+
+### Implementation Details

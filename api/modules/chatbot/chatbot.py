@@ -6,6 +6,9 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import os
+from sentence_transformers import SentenceTransformer
+import numpy as np
+from typing import List, Tuple
 
 os.environ['TRANSFORMERS_CACHE'] = 'E:/transformers_cache'  # Remplacez par un chemin avec suffisamment d'espace
 
@@ -42,9 +45,35 @@ class MonkeyIslandChatbot:
         # Initialize and load data
         self._load_character_templates()
         self._load_monkey_island_data()
+        self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.embeddings_cache = {}
+        self._initialize_embeddings()
 
         self._initialized = True
+    def _initialize_embeddings(self):
+        """Pré-calculer les embeddings pour tous les documents."""
+        print("Initialisation des embeddings...")
+        for item in self.monkey_island_data:
+            text = f"{item['title']} {item['content']}"
+            if text not in self.embeddings_cache:
+                self.embeddings_cache[text] = self.embedding_model.encode(text)
 
+    def _get_similar_documents(self, query: str, top_k: int = 3) -> List[Tuple[float, dict]]:
+        """Récupérer les documents les plus similaires en utilisant la similarité cosinus."""
+        query_embedding = self.embedding_model.encode(query)
+        
+        similarities = []
+        for item in self.monkey_island_data:
+            text = f"{item['title']} {item['content']}"
+            doc_embedding = self.embeddings_cache[text]
+            similarity = np.dot(query_embedding, doc_embedding) / (
+                np.linalg.norm(query_embedding) * np.linalg.norm(doc_embedding)
+            )
+            similarities.append((similarity, item))
+        
+        # Trier par similarité décroissante
+        similarities.sort(reverse=True, key=lambda x: x[0])
+        return similarities[:top_k]
     def _load_character_templates(self):
         """Load character templates."""
         try:
@@ -57,19 +86,48 @@ class MonkeyIslandChatbot:
     def _load_monkey_island_data(self):
         """Load Monkey Island data."""
         try:
-            json_path = Path("data/monkey_island_data.json")
+            json_path = Path("./monkey_island_data.json")
             with open(json_path) as f:
                 self.monkey_island_data = json.load(f)
         except Exception as e:
             raise Exception(f"Error loading data: {str(e)}")
 
     def search_monkey_island_data(self, query: str) -> str:
-        """Search Monkey Island data."""
+        """Recherche améliorée avec RAG pour trouver les informations pertinentes."""
+        query_lower = query.lower()
         results = []
+
+        # Recherche exacte
+        exact_matches = []
         for item in self.monkey_island_data:
-            if query.lower() in item["title"].lower() or query.lower() in item["content"].lower():
+            title_match = query_lower in item["title"].lower()
+            content_match = query_lower in item["content"].lower()
+            
+            if title_match or content_match:
+                exact_matches.append(item)
+
+        # Si on trouve des correspondances exactes
+        if exact_matches:
+            for item in exact_matches:
                 results.append(f"- **{item['title']}**: {item['content']}")
-        return "\n".join(results) if results else "No relevant information found."
+
+        # Ajouter des résultats similaires sémantiquement
+        similar_docs = self._get_similar_documents(query)
+        for similarity, item in similar_docs:
+            if similarity > 0.5:  # Seuil de similarité
+                result_str = f"- **{item['title']}**: {item['content']}"
+                if result_str not in results:  # Éviter les doublons
+                    results.append(result_str)
+
+        # Ajouter un indicateur de pertinence
+        if results:
+            context = "\n\nContexte supplémentaire qui pourrait vous intéresser:\n"
+            return "\n".join(results[:1]) + context + "\n".join(results[1:]) if len(results) > 1 else results[0]
+        
+        return "Aucune information pertinente trouvée."
+
+
+
 
     def get_response(self, message: str, character: str = "guybrush") -> Dict:
         """Generate response with character personality."""

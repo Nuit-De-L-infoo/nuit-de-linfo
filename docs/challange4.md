@@ -37,11 +37,11 @@ Implement comprehensive monitoring for the Ocean-Body Educational Platform using
    - Carbon footprint visualization
 
 2. **Alert Configuration**
-   - Performance thresholds
-   - Error rate monitoring
+   - Flask application performance thresholds
+   - Error rate monitoring through Flask error handlers
    - Resource usage alerts
    - CO2 emission thresholds
-   - Daily active users alerts
+   - Daily active users alerts via nginx logs
 
 #### Monitoring Features
 - Real-time system metrics visualization

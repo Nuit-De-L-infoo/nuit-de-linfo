@@ -11,9 +11,7 @@
     right: 0;                          /* Ensures the navbar spans the full width */
     z-index: 1000;                     /* Keeps the navbar on top of other elements */
     background-color: rgba(255, 255, 255, 1); /* Optional: Slight transparent background for navbar */
-/* Smooth transition for background & shadow on hover */
 
-    /* Hover effect on the whole navbar */
     &:hover {
         background-color: rgba(255, 255, 255, 1); /* Solid background when hovered */
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow effect on hover */

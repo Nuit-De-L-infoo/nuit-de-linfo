@@ -2,8 +2,8 @@
 import { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.scss";
+import Chat from "./components/Chat";
 
-// Local font imports
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -33,6 +33,7 @@ export default function RootLayout({
       >
         {/* Here you render children which represent page content */}
         {children}
+        <Chat />
       </body>
     </html>
   );
