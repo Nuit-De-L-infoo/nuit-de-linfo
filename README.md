@@ -44,7 +44,7 @@
 
 ## Technology Stack
 - Frontend: Next.js with TypeScript
-- Backend: Django REST Framework
+- Backend: Flask with Python
 - Monitoring: Grafana, Prometheus
 - AI Integration: Custom NLP implementation
 - Database: SQLite (Development)
