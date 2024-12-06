@@ -1,4 +1,4 @@
-# La Nuit de l'Info 2024 Challenge
+# Ocean-Body Educational Platform
 
 ## Overview
 The challenge focuses on creating an educational and interactive web application that draws parallels between the ocean and the human body.

@@ -1,48 +1,40 @@
 # AI Integration Challenge: Ocean-Body Intelligence
 
 ## Overview
-Develop AI-powered features to enhance the ocean-body parallel educational platform, making it more intelligent, personalized, and engaging for users.
+Enhance the Ocean-Body Educational Platform with AI-powered features that create an intelligent, personalized learning experience about ocean-body parallels.
 
-## Challenge Description
-Integrate artificial intelligence solutions to improve the educational experience and strengthen the connection between ocean preservation and human health awareness.
+### Core AI Features
 
-### Core AI Requirements
+1. **Ocean-Body Parallel Analysis**
+   - AI-powered visualization of connections between ocean and body systems
+   - Smart identification of marine life and their bodily counterparts
+   - Real-time health analysis of ocean systems with body system comparisons
 
-#### 1. Natural Language Processing
-- Intelligent chatbot for answering ocean-body parallel questions
-- Content summarization for educational materials
-- Multilingual support for global accessibility
+2. **Personalized Learning**
+   - Adaptive content based on user understanding
+   - Custom learning paths for different user types
+   - Progress tracking and recommendations
+   - Multi-language support for global accessibility
 
-#### 2. Computer Vision
-- Image recognition for marine life identification
-- Visual analysis of ocean health indicators
-- AR features for interactive body-ocean visualization
+3. **Interactive Features**
+   - Natural language chatbot for ocean-body questions
+   - Visual recognition for marine life identification
+   - AR features for body-ocean system visualization
+   - Real-time translation of educational content
 
-#### 3. Machine Learning
-- Personalized learning paths based on user interaction
-- Predictive models for ocean health impacts
-- Pattern recognition in user behavior for content optimization
+### Technical Implementation
 
-### Implementation Areas
+1. **AI Models**
+   - Ocean health analysis algorithms
+   - Natural language processing for user interaction
+   - Computer vision for marine life identification
+   - Machine learning for personalization
 
-1. **Educational Enhancement**
-   - AI-driven content recommendations
-   - Adaptive difficulty levels
-   - Interactive Q&A systems
-   - Real-time translation services
-
-2. **Visualization Intelligence**
-   - Dynamic ocean-body parallel mapping
-   - AI-generated analogies
-   - Interactive 3D modeling
-   - Smart data visualization
-
-3. **User Experience**
-   - Personalized learning journeys
-   - Smart progress tracking
-   - Engagement optimization
-   - Behavioral analysis
-
+2. **Integration Requirements**
+   - API endpoints for AI services
+   - Real-time processing capabilities
+   - Efficient model deployment
+   - Cross-platform compatibility
 ## Evaluation Criteria
 
 ### Technical Assessment (70%)
@@ -55,10 +47,6 @@ Integrate artificial intelligence solutions to improve the educational experienc
 - AI model explanation
 - Ethical considerations
 - Source attribution
-
-## Prize
-- €400 award (distributed based on merit among winners)
-
 ## Submission Requirements
 1. Project Documentation
    - AI problem statement
