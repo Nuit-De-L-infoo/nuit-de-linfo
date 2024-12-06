@@ -1,12 +1,16 @@
-# Application Supervision Challenge: Grafana Monitoring Stack
+# Application Monitoring Challenge: Ocean Health Tracking
 
 ## Overview
-This challenge, sponsored by MIPIHSIB (Healthcare Information Systems Specialist), focuses on implementing a comprehensive monitoring solution using Grafana, Prometheus, and Node Exporter in a containerized environment.
+Implement comprehensive monitoring for the Ocean-Body Educational Platform using Grafana, focusing on technical performance, environmental impact, and user engagement metrics.
 
-## Challenge Description
-Create a robust monitoring system using the Grafana stack to provide real-time insights into application and system health, performance metrics, and resource utilization. The solution should be fully containerized using Docker for easy deployment and scaling.
+### Monitoring Scope
 
-### Technical Stack
+1. **Platform Health**
+   - System performance metrics
+   - Resource utilization 
+   - Error tracking
+   - API health monitoring
+   - CO2 emissions tracking
 
 #### Core Components
 1. **Grafana**
@@ -14,26 +18,30 @@ Create a robust monitoring system using the Grafana stack to provide real-time i
    - Alert management
    - Node Exporter Full Dashboard implementation
    - Custom dashboard development
+   - CO2 emissions visualization
 
-2. **Prometheus**
-   - Metrics collection and storage
-   - Query handling
-   - Target monitoring
-   - Alert rules configuration
+3. **Environmental Impact**
+   - Resource consumption metrics
+   - Carbon footprint tracking per service
+   - Power usage effectiveness (PUE)
+   - Green hosting metrics
+   - CO2 emissions per user session
 
-3. **Node Exporter**
-   - System metrics collection
-   - Hardware monitoring
-   - Resource utilization tracking
-   - Performance metrics gathering
+### Technical Implementation
 
-### Implementation Requirements
+1. **Grafana Dashboards**
+   - Ocean-Body parallel usage metrics
+   - User engagement analytics from nginx logs
+   - System health overview
+   - Resource utilization trends
+   - Carbon footprint visualization
 
-#### Docker Configuration
-- Docker Compose setup for all components
-- Container orchestration
-- Volume management for persistent data
-- Network configuration between services
+2. **Alert Configuration**
+   - Performance thresholds
+   - Error rate monitoring
+   - Resource usage alerts
+   - CO2 emission thresholds
+   - Daily active users alerts
 
 #### Monitoring Features
 - Real-time system metrics visualization
@@ -42,6 +50,13 @@ Create a robust monitoring system using the Grafana stack to provide real-time i
   - Memory consumption
   - Disk I/O
   - Network statistics
+  - Power consumption
+- CO2 emissions monitoring
+- User engagement metrics from nginx logs
+  - Unique visitors
+  - Session duration
+  - Peak usage times
+  - Geographic distribution
 - Alert configuration
 - Historical data analysis
 - Performance tracking
@@ -49,6 +64,8 @@ Create a robust monitoring system using the Grafana stack to provide real-time i
 #### Dashboard Requirements
 - Node Exporter Full Dashboard implementation
 - Custom dashboards for specific metrics
+- CO2 emissions dashboard
+- User engagement dashboard
 - Intuitive navigation
 - Responsive design
 
@@ -58,11 +75,14 @@ Create a robust monitoring system using the Grafana stack to provide real-time i
    - Service containerization
    - Network setup
    - Volume management
+   - Nginx log collection
 
 2. **Monitoring Configuration**
    - Prometheus target configuration
    - Grafana datasource setup
    - Node Exporter metrics collection
+   - CO2 metrics collection
+   - Nginx log parsing
    - Alert rules definition
 
 3. **Security Considerations**
@@ -70,6 +90,7 @@ Create a robust monitoring system using the Grafana stack to provide real-time i
    - Access control
    - Data protection
    - Network security
+   - Log data anonymization
 
 ### Evaluation Criteria
 
@@ -97,12 +118,14 @@ Create a robust monitoring system using the Grafana stack to provide real-time i
 - Dashboard setup instructions
 - Alert configuration guide
 - Troubleshooting section
+- Nginx log parsing setup guide
 
 ## Additional Information
 - Solution must be containerized using Docker
 - Use of official Docker images recommended
 - Focus on scalability and maintainability
 - Healthcare-oriented considerations welcome
+- Environmental impact monitoring required
 
 ## About MIPIHSIB
 - Leading French healthcare IT systems provider

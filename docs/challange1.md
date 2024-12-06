@@ -1,4 +1,7 @@
-# Ocean Health Analytics Challenge
+# Ocean Health Analytics Challenge  (discontinued)
+
+> **IMPORTANT NOTICE**: This challenge has been discontinued and is no longer active. Please disregard this challenge as it will not be implemented.
+
 
 ## Overview
 This challenge combines ocean health education with data analytics, creating a comprehensive statistical tracking system for our ocean-body parallel educational platform.

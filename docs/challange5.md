@@ -1,89 +1,85 @@
-# Interactive Pirate Guide Challenge: Monkey Island 2.0
+# Interactive Pirate Guide Challenge: Ocean Explorer's Companion
 
 ## Overview
-Create an engaging user assistance feature (chatbot, FAQ, etc.) themed around the Monkey Island universe, combining technical implementation with creative storytelling and humor.
+Create an engaging pirate-themed guide system with an intelligent chatbot for the Ocean-Body Educational Platform, making learning about ocean-body parallels fun, accessible, and memorable.
 
-### Core Requirements
+### Core Features
 
-#### User Assistance Features
-- Interactive help system styled in Monkey Island theme
-- Character-driven responses and interactions
-- Integration of game references and pirate vocabulary
-- Pop culture references and humor elements
+1. **Pirate Guide Character & Chatbot**
+   - Interactive mascot for navigation
+   - AI-powered chatbot with pirate personality
+   - Ocean-body parallel explanations
+   - Multi-language support for global accessibility
+   - FAQ system with context-aware responses
+   - Progressive discovery mechanics
 
-#### Technical Requirements
-1. **Chatbot/FAQ Implementation**
-   - Natural language processing capabilities
+2. **Educational Integration**
+   - Story-driven learning paths
+   - Ocean preservation quests
+   - Body system exploration missions
+   - Hidden ocean facts as treasures
+   - Interactive Q&A sessions
+   - Dynamic content adaptation based on user understanding
+
+3. **Interactive Elements**
+   - Mini-games about ocean health
+   - Treasure hunt learning activities
+   - Achievement badges
+   - Progress map
+   - Real-time ocean health indicators
+   - Interactive FAQ exploration
+
+### Technical Implementation
+
+1. **Character & Chatbot System**
+   - Dynamic dialogue system
+   - Natural Language Processing (NLP) integration
    - Context-aware responses
-   - Multi-path conversation flows
-   - Response customization based on user interaction
+   - Personality adaptation
+   - Progress tracking
+   - Multi-language support
+   - FAQ database management
 
-2. **Design Elements**
-   - Monkey Island visual styling
-   - Themed UI components
-   - Character-appropriate animations
-   - Retro gaming aesthetics
+2. **Integration Features**
+   - Seamless platform integration
+   - Performance-optimized animations
+   - Responsive design support
+   - Accessibility features
+   - Resource-efficient content delivery
+   - Cross-platform compatibility
 
-3. **Content Development**
-   - Pirate-themed help content
-   - Easter egg implementations
-   - Hidden features and jokes
-   - Reference database integration
+3. **Environmental Considerations**
+   - Eco-friendly resource loading
+   - Optimized asset delivery
+   - Green hosting compatibility
+   - Carbon footprint monitoring
 
-### Implementation Areas
+### Evaluation Criteria
+- Educational effectiveness (25%)
+- Creative implementation (25%)
+- Technical quality (25%)
+- User engagement & accessibility (25%)
 
-1. **User Experience**
-   - Intuitive navigation
-   - Character-driven interactions
-   - Engaging response patterns
-   - Easter egg discovery system
-
-2. **Technical Integration**
-   - API implementation
-   - Response handling
-   - State management
-   - Performance optimization
-
-3. **Creative Elements**
-   - Original dialogue writing
-   - Character personality development
-   - Hidden features implementation
-   - Cultural reference integration
-
-## Evaluation Criteria
-
-### Core Assessment (70%)
-- Creative implementation (30%)
-- Technical functionality (20%)
-- User experience (20%)
-
-### Bonus Features (30%)
-- Easter egg creativity
-- Reference integration
-- Humor quality
-- Visual design
-
-## Prize
-- €1000 in gift vouchers (shared among winning team members)
+## Technical Requirements
+- AI/ML integration for chatbot functionality
+- Containerized deployment support
+- Monitoring capability integration
+- Resource optimization implementation
+- Multi-language support architecture
 
 ## Submission Requirements
-1. **Video Demonstration**
-   - YouTube link showcasing feature usage
-   - Highlight of key functionalities
-   - Demonstration of Easter eggs
-   - User interaction examples
+- Character design documentation
+- Chatbot conversation flows
+- FAQ database structure
+- Interaction flow diagrams
+- Implementation code
+- User testing results
+- Performance metrics
+- Environmental impact assessment
 
-2. **Technical Documentation**
-   - Implementation details
-   - Feature documentation
-   - Easter egg guide
-   - Integration instructions
-
-## Contact
-Submit through the official challenge platform (video submission via YouTube link)
-
-## Sponsor Information
-3DS OUTSCALE, a Dassault Systèmes brand
-- Website: https://fr.outscale.com
-- LinkedIn: https://www.linkedin.com/company/outscale
-- Twitter: https://twitter.com/outscale_fr
+## Integration Guidelines
+- Align with main Ocean-Body parallel theme
+- Support key analogies (heart/currents, lungs/gas exchange)
+- Mobile-first design approach
+- QR code integration support
+- Event display compatibility
