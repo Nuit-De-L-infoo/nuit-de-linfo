@@ -109,7 +109,7 @@ Create an engaging pirate-themed guide system with an intelligent chatbot for th
   - User feedback integration
   - Mobile-optimized layout
 
-
+## Capture de travail
 ![Pirate Chatbot Interface](../assets/images/chatbot1.png)
 *Interface de test de prompt*
 
