@@ -2,12 +2,31 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 from modules.chatbot.chatbot import MonkeyIslandChatbot
 import os
+import json
 
 app = Flask(__name__)
 CORS(app)
 
-# Initialize the chatbot
-chatbot = MonkeyIslandChatbot()
+# Définir le chemin absolu une seule fois
+current_dir = os.path.dirname(os.path.abspath(__file__))
+data_path = os.path.join(current_dir, 'data', 'monkey_island_data.json')
+print(f"Searching for data file at: {data_path}")
+
+# Vérifier si le répertoire 'data' existe, sinon le créer
+data_dir = os.path.join(current_dir, 'data')
+if not os.path.exists(data_dir):
+    os.makedirs(data_dir)
+
+# Créer le fichier JSON s'il n'existe pas
+if not os.path.exists(data_path):
+    default_data = {
+        "conversations": []
+    }
+    with open(data_path, 'w') as f:
+        json.dump(default_data, f, indent=4)
+
+# Initialiser le chatbot en passant le chemin du fichier
+chatbot = MonkeyIslandChatbot(data_path=data_path)
 
 @app.route('/')
 def home():
