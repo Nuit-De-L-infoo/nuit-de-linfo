@@ -3,18 +3,21 @@ version: "3.8"
 services:
   frontend:
     build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: react-app
+      context: web
+    container_name: web
     ports:
       - "3000:3000"
     volumes:
-      - .:/app
-      - /app/node_modules
-    environment:
-      - CHOKIDAR_USEPOLLING=true
-      - NODE_ENV=development
-      - WATCHPACK_POLLING=true
-    stdin_open: true # for react-scripts
-    tty: true
+      - ./web:/app
     restart: unless-stopped
+
+  api:
+    build:
+      context: api
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/app
+    restart: unless-stopped
+    command: python manage.py runserver 0.0.0.0:8000

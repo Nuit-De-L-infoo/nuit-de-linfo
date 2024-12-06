@@ -1,19 +1,21 @@
-FROM python:3.8.13-bullseye
+FROM python:3.11-alpine
 
 ENV PYTHONUNBUFFERED=1
 
-WORKDIR /api
+WORKDIR /app
 
-# Copy dependency files first
 COPY requirements.txt .
 
-# Install dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+# Install build dependencies needed for some Python packages
+RUN apk add --no-cache --virtual .build-deps \
+    gcc \
+    musl-dev \
+    python3-dev &&
+    /usr/local/bin/python -m pip install --no-cache-dir -r requirements.txt &&
+    apk del .build-deps
 
-# Copy project files
 COPY . .
 
 EXPOSE 8000
 
-# Add a CMD instruction
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
