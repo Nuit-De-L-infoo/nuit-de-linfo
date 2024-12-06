@@ -114,7 +114,7 @@ export default function Chat() {
 
       {/* Chat window */}
       {isOpen && (
-        <div className="absolute bottom-20 right-0 w-90 h-[530px] bg-white rounded-lg shadow-xl flex flex-col transition-all duration-300 ease-in-out">
+        <div className="absolute bottom-0 right-0 w-90 h-[530px] bg-white rounded-lg shadow-xl flex flex-col transition-all duration-300 ease-in-out">
           {/* Chat Header */}
           <div className="bg-gradient-to-r from-blue-600 to-teal-600 text-white p-4 rounded-t-lg flex items-center justify-between">
             <div className="flex items-center justify-center w-full">
