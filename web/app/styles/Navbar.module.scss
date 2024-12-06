@@ -43,7 +43,7 @@
     text-decoration: none;             /* Removes the underline from the links */
     color: #2c7074;                    /* Sets the default text color */
     font-size: 16px;                   /* Sets the font size */
-    font-weight: 500;                  /* Makes the font weight medium */
+    font-weight: bold;                  /* Keep only one font-weight declaration */
     transition: color 0.3s ease-in-out; /* Adds a smooth color transition on hover */
 }
 
