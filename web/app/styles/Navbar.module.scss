@@ -6,21 +6,39 @@
     align-items: center;               /* Vertically centers the navbar items */
     width: 100%;                       /* Makes the navbar span the full width of the screen */
     position: fixed;                   /* Keeps the navbar fixed at the top */
-    top: 20;                            /* Aligns the navbar to the top of the page */
+    top: 0;                            /* Aligns the navbar to the top of the page */
     left: 0;                           /* Aligns the navbar to the left of the page */
     right: 0;                          /* Ensures the navbar spans the full width */
     z-index: 1000;                     /* Keeps the navbar on top of other elements */
+    background-color: rgba(255, 255, 255, 1); /* Optional: Slight transparent background for navbar */
+/* Smooth transition for background & shadow on hover */
 
-    .titre{
+    /* Hover effect on the whole navbar */
+    &:hover {
+        background-color: rgba(255, 255, 255, 1); /* Solid background when hovered */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow effect on hover */
+    }
+
+    .titre {
         color: #2c7074;
         font-weight: bold;
         font-size: 24px;
+        transition: color 0.3s ease; /* Smooth transition on color change */
     }
-    .title{
+
+    .titre:hover {
+        color: #000000;
+        cursor: pointer;
+    }
+
+    .title {
         font-size: 24px;
         font-weight: bold;
+        color: #000000;
+        transition: color 0.3s ease; /* Smooth transition on color change */
     }
-    .title:hover{
+
+    .title:hover {
         color: #2c7074;
         cursor: pointer;
     }
@@ -31,6 +49,12 @@
     display: flex;                     /* Flexbox layout for the navbar items */
     list-style-type: none;             /* Removes default list styles */
     gap: 60px;                         /* Adds space between each list item */
+    transition: all 0.3s ease-in-out;  /* Smooth transition for list item on hover */
+}
+
+/* Navbar List Item Hover Effect */
+.navbar__item:hover {
+    transform: scale(1.05);  /* Slight scaling effect when hovering over the navbar items */
 }
 
 /* Navbar Links */
@@ -49,11 +73,17 @@
 
 /* Navbar Link Hover Effect */
 .navbar__item a:hover {
-    color: #0e425a;                    /* Changes the color to a gold shade on hover */
+    color: #0e425a;                    /* Changes the color to a deeper shade when hovered */
 }
 
 /* Logo Styling */
 .navbar img {
     height: 40px;                      /* Sets a fixed height for the logo */
     object-fit: contain;               /* Ensures the logo image scales well without distortion */
+    transition: transform 0.3s ease;   /* Adds transition for logo scaling */
+}
+
+/* Logo Hover Effect */
+.navbar img:hover {
+    transform: scale(1.1);             /* Slightly scales up the logo when hovered */
 }
